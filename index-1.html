@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="مِداد — مساحة ثقافية هادئة للحياة والفكر والمعرفة والسفر.">
+  <meta name="theme-color" content="#f6f3ed">
+  <title>مِداد | MEDAD — مساحة للفكر والحياة</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f6f3ed;--white:#fffefa;--ink:#26352f;--muted:#77796f;--green:#526b5d;--gold:#b58a54;--line:#e5dfd3;--soft:#ece8df}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans Arabic",sans-serif;line-height:1.8}
+    a{color:inherit;text-decoration:none} button,input{font:inherit}
+    .wrap{width:min(1120px,92%);margin:auto}
+    .topline{border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+    .topline .wrap{display:flex;justify-content:space-between;align-items:center;padding:8px 0;gap:12px}
+    .brandbar{padding:24px 0 18px;text-align:center}
+    .brand{font-family:"Amiri",serif;font-size:48px;font-weight:700;letter-spacing:.5px;line-height:1.2}
+    .brand span{font-family:"Playfair Display",serif;font-size:20px;letter-spacing:4px;color:var(--green);margin-inline-start:8px}
+    .tagline{color:var(--muted);font-size:13px;margin-top:3px}
+    nav{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;justify-content:center;align-items:center;gap:clamp(15px,3vw,34px);padding:12px 0;flex-wrap:wrap}
+    nav a{font-size:14px;color:#4c5a51} nav a:hover{color:var(--gold)}
+    .lang{border:1px solid var(--line);background:transparent;border-radius:20px;padding:3px 10px;font-size:12px;cursor:pointer;color:var(--green)}
+    .hero{padding:42px 0 30px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}
+    .eyebrow{color:var(--gold);font-size:12px;font-weight:700;letter-spacing:1px}
+    h1{font-family:"Amiri",serif;font-size:clamp(34px,5vw,56px);line-height:1.35;margin:10px 0 14px;font-weight:700}
+    .hero p{color:#686d64;max-width:520px;margin:0 0 22px}
+    .primary{display:inline-block;background:var(--green);color:white;padding:10px 22px;border-radius:3px;font-size:14px;transition:.2s}
+    .primary:hover{background:#3d5447}
+    .heroimg{min-height:330px;background:linear-gradient(0deg,rgba(24,39,31,.22),rgba(24,39,31,.02)),url("https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=1200&q=85") center/cover;border-radius:3px;position:relative}
+    .heroimg:after{content:"";position:absolute;inset:14px;border:1px solid rgba(255,255,255,.55);pointer-events:none}
+    .sectionhead{display:flex;justify-content:space-between;align-items:end;border-bottom:1px solid var(--line);padding-bottom:10px;margin:26px 0 20px}
+    h2{font-family:"Amiri",serif;font-size:29px;margin:0;font-weight:700}
+    .sectionhead small{color:var(--muted);font-size:12px}
+    .categories{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .cat{background:var(--white);border:1px solid var(--line);padding:16px 10px;text-align:center;font-family:"Amiri",serif;font-size:18px;transition:.2s}
+    .cat:hover{border-color:var(--gold);transform:translateY(-2px)}
+    .cat i{display:block;font-style:normal;color:var(--gold);font-family:serif;font-size:22px;margin-bottom:4px}
+    .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .article{background:var(--white);border:1px solid var(--line);overflow:hidden}
+    .article img{width:100%;height:190px;object-fit:cover;display:block}
+    .articlebody{padding:17px}
+    .tag{font-size:11px;color:var(--gold);font-weight:700}
+    .article h3{font-family:"Amiri",serif;font-size:22px;line-height:1.45;margin:7px 0}
+    .article p{font-size:13px;color:var(--muted);margin:0 0 12px}
+    .read{font-size:12px;color:var(--green);border-bottom:1px solid #b9c2b8;padding-bottom:2px}
+    .quote{margin:44px 0;background:#e9e6dc;padding:30px 25px;text-align:center}
+    .quote blockquote{font-family:"Amiri",serif;font-size:27px;margin:0 auto 8px;max-width:760px}
+    .quote small{color:var(--muted)}
+    .newsletter{background:var(--green);color:#fff;padding:30px;text-align:center;margin:42px 0}
+    .newsletter h2{color:white}.newsletter p{font-size:13px;color:#e1e8e1}
+    .newsletter form{display:flex;max-width:430px;margin:15px auto 0;gap:8px}
+    .newsletter input{flex:1;min-width:0;border:0;padding:10px 12px;border-radius:2px;background:#fff}
+    .newsletter button{border:1px solid #d8dfd7;background:transparent;color:white;padding:8px 16px;cursor:pointer;border-radius:2px}
+    footer{border-top:1px solid var(--line);padding:25px 0 35px;color:var(--muted);font-size:12px}
+    footer .wrap{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .search{border:1px solid var(--line);background:var(--white);padding:7px 12px;width:180px;font-size:12px}
+    .notice{font-size:11px;color:var(--muted);text-align:center;margin:10px 0 0}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:28px}.heroimg{min-height:230px;grid-row:1}.categories{grid-template-columns:repeat(2,1fr)}.articles{grid-template-columns:1fr}.article img{height:220px}.brand{font-size:40px}.topline .wrap{justify-content:center}.topline .wrap span:first-child{display:none}nav .wrap{gap:12px}.sectionhead{align-items:center}}
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span id="dateLine">مساحة هادئة للفكر والمعرفة</span><span>مجلة ثقافية مستقلة</span></div></div>
+  <header>
+    <div class="brandbar wrap">
+      <div class="brand">مِداد <span>MEDAD</span></div>
+      <div class="tagline" data-ar="نكتب لنفهم العالم… ونقرأ لنكتشف أنفسنا" data-fr="Écrire pour comprendre le monde, lire pour se découvrir." data-en="Writing to understand the world; reading to discover ourselves.">نكتب لنفهم العالم… ونقرأ لنكتشف أنفسنا</div>
+    </div>
+    <nav><div class="wrap">
+      <a href="#home" data-ar="الرئيسية" data-fr="Accueil" data-en="Home">الرئيسية</a>
+      <a href="#society" data-ar="الحياة والمجتمع" data-fr="Société" data-en="Society">الحياة والمجتمع</a>
+      <a href="#culture" data-ar="الثقافة والفكر" data-fr="Culture & idées" data-en="Culture & Ideas">الثقافة والفكر</a>
+      <a href="#news" data-ar="أخبار ومعلومات" data-fr="Actualités" data-en="News">أخبار ومعلومات</a>
+      <a href="#travel" data-ar="السياحة والسفر" data-fr="Voyage" data-en="Travel">السياحة والسفر</a>
+      <a href="#inspiration" data-ar="إلهام وحكم" data-fr="Inspiration" data-en="Inspiration">إلهام وحكم</a>
+      <button class="lang" id="languageBtn" type="button">FR / EN</button>
+    </div></nav>
+  </header>
+
+  <main class="wrap" id="home">
+    <section class="hero">
+      <div>
+        <div class="eyebrow" data-ar="فكرة تستحق القراءة" data-fr="UNE IDÉE À LIRE" data-en="A THOUGHT WORTH READING">فكرة تستحق القراءة</div>
+        <h1 data-ar="بين سطور الحياة،<br>نبحث عن معنى أعمق." data-fr="Entre les lignes de la vie,<br>chercher un sens plus profond." data-en="Between the lines of life,<br>we search for deeper meaning.">بين سطور الحياة،<br>نبحث عن معنى أعمق.</h1>
+        <p data-ar="مِداد مساحة ثقافية هادئة تجمع المقالات الفكرية والاجتماعية، المعرفة، الإلهام، وحكايات السفر. محتوى يفتح باب السؤال ويمنح الفكرة وقتها." data-fr="MEDAD est un espace culturel consacré aux idées, à la société, au savoir, à l'inspiration et aux récits de voyage." data-en="MEDAD is a thoughtful cultural space for ideas, society, knowledge, inspiration and travel stories.">مِداد مساحة ثقافية هادئة تجمع المقالات الفكرية والاجتماعية، المعرفة، الإلهام، وحكايات السفر. محتوى يفتح باب السؤال ويمنح الفكرة وقتها.</p>
+        <a class="primary" href="#latest" data-ar="اكتشف المقالات" data-fr="Découvrir les articles" data-en="Explore articles">اكتشف المقالات</a>
+      </div>
+      <div class="heroimg" role="img" aria-label="مكتبة وكتب"></div>
+    </section>
+
+    <section id="categories">
+      <div class="sectionhead"><h2 data-ar="أبواب مِداد" data-fr="Rubriques" data-en="Explore topics">أبواب مِداد</h2><small data-ar="مساحات متنوعة… يجمعها حب المعرفة" data-fr="Des thèmes variés, un même goût du savoir" data-en="Different themes, one love of knowledge">مساحات متنوعة… يجمعها حب المعرفة</small></div>
+      <div class="categories">
+        <a class="cat" href="#society"><i>❧</i><span data-ar="الحياة والمجتمع" data-fr="Société" data-en="Society">الحياة والمجتمع</span></a>
+        <a class="cat" href="#culture"><i>✦</i><span data-ar="الثقافة والفكر" data-fr="Culture" data-en="Culture">الثقافة والفكر</span></a>
+        <a class="cat" href="#news"><i>◈</i><span data-ar="أخبار ومعلومات" data-fr="Actualités" data-en="News">أخبار ومعلومات</span></a>
+        <a class="cat" href="#inspiration"><i>❋</i><span data-ar="إلهام وحكم" data-fr="Inspiration" data-en="Inspiration">إلهام وحكم</span></a>
+        <a class="cat" href="#travel"><i>⌖</i><span data-ar="السياحة والسفر" data-fr="Voyage" data-en="Travel">السياحة والسفر</span></a>
+      </div>
+    </section>
+
+    <section id="latest">
+      <div class="sectionhead"><h2 data-ar="من دفتر مِداد" data-fr="Le carnet MEDAD" data-en="From the MEDAD journal">من دفتر مِداد</h2><input class="search" id="searchBox" type="search" placeholder="ابحث في المقالات..." aria-label="Search articles"></div>
+      <div class="articles" id="articleGrid">
+        <article class="article" id="society" data-search="الحياة المجتمع التغيير">
+          <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=900&q=80" alt="أشخاص يتحدثون">
+          <div class="articlebody"><span class="tag" data-ar="الحياة والمجتمع" data-fr="SOCIÉTÉ" data-en="SOCIETY">الحياة والمجتمع</span><h3 data-ar="كيف تغيّر التفاصيل الصغيرة شكل حياتنا؟" data-fr="Comment les petits détails transforment-ils nos vies ?" data-en="How do small details shape our lives?">كيف تغيّر التفاصيل الصغيرة شكل حياتنا؟</h3><p data-ar="تأملات في العادات اليومية، العلاقات، والاختيارات التي تصنع الفرق بهدوء." data-fr="Réflexions sur les habitudes, les relations et les choix du quotidien." data-en="Reflections on daily habits, relationships and the choices that quietly matter.">تأملات في العادات اليومية، العلاقات، والاختيارات التي تصنع الفرق بهدوء.</p><a class="read" href="#about" data-ar="اقرأ المزيد ←" data-fr="Lire la suite ←" data-en="Read more →">اقرأ المزيد ←</a></div>
+        </article>
+        <article class="article" id="culture" data-search="الثقافة الفكر القراءة الكتب">
+          <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=900&q=80" alt="رفوف كتب">
+          <div class="articlebody"><span class="tag" data-ar="الثقافة والفكر" data-fr="CULTURE" data-en="CULTURE">الثقافة والفكر</span><h3 data-ar="القراءة ليست جمعاً للمعلومات فقط" data-fr="Lire, ce n'est pas seulement accumuler des informations" data-en="Reading is more than collecting information">القراءة ليست جمعاً للمعلومات فقط</h3><p data-ar="كيف تمنحنا الكتب فرصة لرؤية العالم من نوافذ لم نعرف بوجودها." data-fr="Les livres nous ouvrent des fenêtres inattendues sur le monde." data-en="Books let us see the world through windows we never knew existed.">كيف تمنحنا الكتب فرصة لرؤية العالم من نوافذ لم نعرف بوجودها.</p><a class="read" href="#about" data-ar="اقرأ المزيد ←" data-fr="Lire la suite ←" data-en="Read more →">اقرأ المزيد ←</a></div>
+        </article>
+        <article class="article" id="travel" data-search="السياحة السفر المغرب الطبيعة">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80" alt="جبال وطبيعة">
+          <div class="articlebody"><span class="tag" data-ar="السياحة والسفر" data-fr="VOYAGE" data-en="TRAVEL">السياحة والسفر</span><h3 data-ar="السفر: أن تعود بنظرة مختلفة" data-fr="Voyager : revenir avec un regard différent" data-en="Travel: returning with a different perspective">السفر: أن تعود بنظرة مختلفة</h3><p data-ar="ليست الرحلة مسافة نقطعها فقط، بل تجربة توسّع فهمنا للناس والأماكن." data-fr="Le voyage est une expérience qui élargit notre regard sur les lieux et les gens." data-en="Travel is not just distance; it expands how we understand people and places.">ليست الرحلة مسافة نقطعها فقط، بل تجربة توسّع فهمنا للناس والأماكن.</p><a class="read" href="#about" data-ar="اقرأ المزيد ←" data-fr="Lire la suite ←" data-en="Read more →">اقرأ المزيد ←</a></div>
+        </article>
+      </div>
+      <p class="notice" data-ar="هذه مقالات تجريبية لتوضيح التصميم، ويمكن استبدالها بمقالاتك الأصلية." data-fr="Ces articles sont des exemples de présentation, à remplacer par vos propres contenus." data-en="These are sample articles for the design preview and can be replaced with your own content.">هذه مقالات تجريبية لتوضيح التصميم، ويمكن استبدالها بمقالاتك الأصلية.</p>
+    </section>
+
+    <section class="quote" id="inspiration">
+      <blockquote data-ar="«الكلمة الطيبة أثرٌ يبقى، والفكرة الصادقة طريقٌ يضيء.»" data-fr="« Une parole sincère laisse une trace, une idée juste éclaire le chemin. »" data-en="“A kind word leaves a trace; an honest idea lights the way.”">«الكلمة الطيبة أثرٌ يبقى، والفكرة الصادقة طريقٌ يضيء.»</blockquote>
+      <small data-ar="ومضة من مِداد" data-fr="Une pensée MEDAD" data-en="A MEDAD thought">ومضة من مِداد</small>
+    </section>
+
+    <section class="newsletter" id="about">
+      <h2 data-ar="ابقَ على صلة بمِداد" data-fr="Restez proche de MEDAD" data-en="Stay connected with MEDAD">ابقَ على صلة بمِداد</h2>
+      <p data-ar="قريباً: رسائل دورية بأجمل المقالات والأفكار." data-fr="Bientôt : une sélection périodique d'articles et d'idées." data-en="Coming soon: a periodic selection of articles and ideas.">قريباً: رسائل دورية بأجمل المقالات والأفكار.</p>
+      <form id="subscribeForm"><input type="email" required placeholder="بريدك الإلكتروني" aria-label="Email"><button type="submit" data-ar="سجّل اهتمامك" data-fr="S'inscrire" data-en="Sign up">سجّل اهتمامك</button></form>
+      <div id="formMsg" class="notice" style="color:#fff"></div>
+    </section>
+  </main>
+  <footer><div class="wrap"><span>© <span id="year"></span> مِداد | MEDAD — جميع الحقوق محفوظة</span><span data-ar="منصة ثقافية مستقلة" data-fr="Plateforme culturelle indépendante" data-en="Independent cultural platform">منصة ثقافية مستقلة</span></div></footer>
+
+<script>
+  let lang='ar';
+  const btn=document.getElementById('languageBtn');
+  function setLang(next){
+    lang=next; document.documentElement.lang=next; document.documentElement.dir=next==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-'+next+']').forEach(el=>{el.innerHTML=el.getAttribute('data-'+next)});
+    btn.textContent=next==='ar'?'FR / EN':next==='fr'?'AR / EN':'AR / FR';
+    document.getElementById('searchBox').placeholder=next==='ar'?'ابحث في المقالات...':next==='fr'?'Rechercher des articles...':'Search articles...';
+    document.querySelector('.newsletter input').placeholder=next==='ar'?'بريدك الإلكتروني':next==='fr'?'Votre e-mail':'Your email';
+  }
+  btn.addEventListener('click',()=>setLang(lang==='ar'?'fr':lang==='fr'?'en':'ar'));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('searchBox').addEventListener('input',e=>{
+    const q=e.target.value.trim().toLowerCase();
+    document.querySelectorAll('.article').forEach(card=>card.style.display=(!q || (card.innerText+' '+card.dataset.search).toLowerCase().includes(q))?'':'none');
+  });
+  document.getElementById('subscribeForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('formMsg').textContent=lang==='ar'?'شكراً لاهتمامك بمِداد. نموذج تجريبي؛ لم يتم حفظ البريد.':lang==='fr'?'Merci pour votre intérêt. Formulaire de démonstration, e-mail non enregistré.':'Thank you for your interest. Demo form; email was not stored.';
+    e.target.reset();
+  });
+</script>
+</body>
+</html>
